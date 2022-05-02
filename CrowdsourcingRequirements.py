@@ -14,7 +14,7 @@ df
 # In[2]:
 
 
-# see what is in the 'feature' column (mainly focus on the 'feature' column bc it's the ideas that user put down)
+# see what is in the 'feature' column (mainly focus on the 'feature' column bc it's the ideas that the users put down)
 y = df['feature']
 y
 
@@ -22,7 +22,7 @@ y
 # In[3]:
 
 
-# tokenize, broking down to each word in 'feature' column
+# tokenize, breaking down to each word in 'feature' column
 from nltk.tokenize import word_tokenize
 
 tokenized_word = df['feature'].apply(word_tokenize)
@@ -43,7 +43,7 @@ df
 # In[5]:
 
 
-# rathering stopwords
+# gathering stopwords
 import nltk
 from nltk.corpus import stopwords
 
@@ -88,6 +88,7 @@ df['Filtered']
 
 
 # Stemming
+# reducing inflection in words to their root forms
 from nltk.stem import PorterStemmer
 
 # remove morphological affixes from words
@@ -220,7 +221,7 @@ data = dataF
 
 sse = {}
 
-# run 100 k-means and calculate sum of squared errors (SSE)
+# run 100 k-means and calculate Sum of Squared Errors (SSE)
 for k in range(1, 100):
 #   kmeans = KMeans(n_clusters=k, max_iter=1000).fit(data)
     kmeans = KMeans(n_clusters=k).fit(data)
@@ -280,9 +281,10 @@ cluster_map[cluster_map.cluster == 1]
 
 # In[24]:
 
-
-# I create each cluster once at a time and same it in a file, bc it's more safe this way
-# You can make this progess faster saving 55 files (55 clusters) by using for loop and increment it
+# --------------------
+# I create each cluster once at a time and same it in a file, bc it's better to keep track this way. 
+# Another way is you can make this progess faster saving 55 files (55 clusters) by using for loop and increment it
+# --------------------
 
 # cluster0 = cluster_map[cluster_map.cluster == 0]
 # cluster0.to_csv('clusters_Diem/cluster_0.csv')
@@ -349,352 +351,11 @@ cluster_map[cluster_map.cluster == 5]
 # cluster5.to_csv('clusterFive.csv')
 
 
-# In[34]:
-
-
-# cluster6 = cluster_map[cluster_map.cluster == 6]
-# cluster6.to_csv('clusterSix.csv')
-
-
-# In[35]:
-
-
-# cluster7 = cluster_map[cluster_map.cluster == 7]
-# cluster7.to_csv('clusterSeven.csv')
-
-
-# In[36]:
-
-
-# cluster8 = cluster_map[cluster_map.cluster == 8]
-# cluster8.to_csv('clusterEight.csv')
-
-
-# In[37]:
-
-
-# cluster9 = cluster_map[cluster_map.cluster == 9]
-# cluster9.to_csv('clusterNine.csv')
-
-
-# In[38]:
-
-
-# cluster10 = cluster_map[cluster_map.cluster == 10]
-# cluster10.to_csv('clusterTen.csv')
-
-
-# In[39]:
-
-
-# cluster11 = cluster_map[cluster_map.cluster == 11]
-# cluster11.to_csv('cluster_11.csv')
-
-
-# In[40]:
-
-
-# cluster12 = cluster_map[cluster_map.cluster == 12]
-# cluster12.to_csv('cluster_12.csv')
-
-
-# In[41]:
-
-
-# cluster13 = cluster_map[cluster_map.cluster == 13]
-# cluster13.to_csv('cluster_13.csv')
-
-
-# In[42]:
-
-
-# cluster14 = cluster_map[cluster_map.cluster == 14]
-# cluster14.to_csv('cluster_14.csv')
-
-
-# In[43]:
-
-
-# cluster15 = cluster_map[cluster_map.cluster == 15]
-# cluster15.to_csv('cluster_15.csv')
-
-
-# In[44]:
-
-
-# cluster16 = cluster_map[cluster_map.cluster == 16]
-# cluster16.to_csv('cluster_16.csv')
-
-
-# In[45]:
-
-
-# cluster17 = cluster_map[cluster_map.cluster == 17]
-# cluster17.to_csv('cluster_17.csv')
-
-
-# In[46]:
-
-
-# cluster18 = cluster_map[cluster_map.cluster == 18]
-# cluster18.to_csv('cluster_18.csv')
-
-
-# In[47]:
-
-
-# cluster19 = cluster_map[cluster_map.cluster == 19]
-# cluster19.to_csv('cluster_19.csv')
-
-
-# In[48]:
-
-
-# cluster20 = cluster_map[cluster_map.cluster == 20]
-# cluster20.to_csv('cluster_20.csv')
-
-
-# In[49]:
-
-
-# cluster21 = cluster_map[cluster_map.cluster == 21]
-# cluster21.to_csv('cluster_21.csv')
-
-
-# In[50]:
-
-
-# cluster22 = cluster_map[cluster_map.cluster == 22]
-# cluster22.to_csv('cluster_22.csv')
-
-
-# In[51]:
-
-
-# cluster23 = cluster_map[cluster_map.cluster == 23]
-# cluster23.to_csv('cluster_23.csv')
-
-
-# In[52]:
-
-
-# cluster24 = cluster_map[cluster_map.cluster == 24]
-# cluster24.to_csv('cluster_24.csv')
-
-
-# In[53]:
-
-
-# cluster25 = cluster_map[cluster_map.cluster == 25]
-# cluster25.to_csv('cluster_25.csv')
-
-
-# In[54]:
-
-
-# cluster26 = cluster_map[cluster_map.cluster == 26]
-# cluster26.to_csv('cluster_26.csv')
-
-
-# In[55]:
-
-
-# cluster27 = cluster_map[cluster_map.cluster == 27]
-# cluster27.to_csv('cluster_27.csv')
-
-
-# In[56]:
-
-
-# cluster28 = cluster_map[cluster_map.cluster == 28]
-# cluster28.to_csv('cluster_28.csv')
-
-
-# In[57]:
-
-
-# cluster29 = cluster_map[cluster_map.cluster == 29]
-# cluster29.to_csv('cluster_29.csv')
-
-
-# In[58]:
-
-
-# cluster30 = cluster_map[cluster_map.cluster == 30]
-# cluster30.to_csv('cluster_30.csv')
-
-
-# In[59]:
-
-
-# cluster31 = cluster_map[cluster_map.cluster == 31]
-# cluster31.to_csv('cluster_31.csv')
-
-
-# In[60]:
-
-
-# cluster32 = cluster_map[cluster_map.cluster == 32]
-# cluster32.to_csv('cluster_32.csv')
-
-
-# In[61]:
-
-
-# cluster33 = cluster_map[cluster_map.cluster == 33]
-# cluster33.to_csv('cluster_33.csv')
-
-
-# In[62]:
-
-
-# cluster34 = cluster_map[cluster_map.cluster == 34]
-# cluster34.to_csv('cluster_34.csv')
-
-
-# In[63]:
-
-
-# cluster35 = cluster_map[cluster_map.cluster == 35]
-# cluster35.to_csv('cluster_35.csv')
-
-
-# In[64]:
-
-
-# cluster36 = cluster_map[cluster_map.cluster == 36]
-# cluster36.to_csv('cluster_36.csv')
-
-
-# In[65]:
-
-
-# cluster37 = cluster_map[cluster_map.cluster == 37]
-# cluster37.to_csv('cluster_37.csv')
-
-
-# In[66]:
-
-
-# cluster38 = cluster_map[cluster_map.cluster == 38]
-# cluster38.to_csv('cluster_38.csv')
-
-
-# In[67]:
-
-
-# cluster39 = cluster_map[cluster_map.cluster == 39]
-# cluster39.to_csv('cluster_39.csv')
-
-
-# In[68]:
-
-
-# cluster40 = cluster_map[cluster_map.cluster == 40]
-# cluster40.to_csv('cluster_40.csv')
-
-
-# In[69]:
-
-
-# cluster41 = cluster_map[cluster_map.cluster == 41]
-# cluster41.to_csv('cluster_41.csv')
-
-
-# In[70]:
-
-
-# cluster42 = cluster_map[cluster_map.cluster == 42]
-# cluster42.to_csv('cluster_42.csv')
-
-
-# In[71]:
-
-
-# cluster43 = cluster_map[cluster_map.cluster == 43]
-# cluster43.to_csv('cluster_43.csv')
-
-
-# In[72]:
-
-
-# cluster44 = cluster_map[cluster_map.cluster == 44]
-# cluster44.to_csv('cluster_44.csv')
-
-
-# In[73]:
-
-
-# cluster45 = cluster_map[cluster_map.cluster == 45]
-# cluster45.to_csv('cluster_45.csv')
-
-
-# In[74]:
-
-
-# cluster46 = cluster_map[cluster_map.cluster == 46]
-# cluster46.to_csv('cluster_46.csv')
-
-
-# In[75]:
-
-
-# cluster47 = cluster_map[cluster_map.cluster == 47]
-# cluster47.to_csv('cluster_47.csv')
-
-
-# In[76]:
-
-
-# cluster48 = cluster_map[cluster_map.cluster == 48]
-# cluster48.to_csv('cluster_48.csv')
-
-
-# In[77]:
-
-
-# cluster49 = cluster_map[cluster_map.cluster == 49]
-# cluster49.to_csv('cluster_49.csv')
-
-
-# In[78]:
-
-
-# cluster50 = cluster_map[cluster_map.cluster == 50]
-# cluster50.to_csv('cluster_50.csv')
-
-
-# In[79]:
-
-
-# cluster51 = cluster_map[cluster_map.cluster == 51]
-# cluster51.to_csv('cluster_51.csv')
-
-
-# In[80]:
-
-
-# cluster52 = cluster_map[cluster_map.cluster == 52]
-# cluster52.to_csv('cluster_52.csv')
-
-
-# In[81]:
-
-
-# cluster53 = cluster_map[cluster_map.cluster == 53]
-# cluster53.to_csv('cluster_53.csv')
-
-
-# In[82]:
-
-
-# cluster54 = cluster_map[cluster_map.cluster == 54]
-# cluster54.to_csv('cluster_54.csv')
-
+# ---------------- Countinue to create the process above to save 55 files (55 clusters).-------------
 
 # In[83]:
 
-
+# ---------Finally----------
 # try to merge 2 files to get the different phases of questions
 
 df2 = pd.read_csv('users.csv')
